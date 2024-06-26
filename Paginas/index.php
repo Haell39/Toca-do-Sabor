@@ -1,3 +1,8 @@
+<?php
+if (isset($_GET['message'])) {
+    echo '<script>alert("' . htmlspecialchars($_GET['message']) . '");</script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,9 +26,7 @@
                 display: flex !important;
             }
         }
-
     </style>
-
 </head>
 
 <body>
@@ -50,7 +53,6 @@
          </div>
     </header>
 
-
     <section class="first-section">
        <div class="conteudo-principal">
         <h1>Deixe seu dia mais saboroso!!!</h1>
@@ -70,9 +72,6 @@
             <input type="radio" name="radio-btn" id="radio3">
             <input type="radio" name="radio-btn" id="radio4">
     
-         
-            
-          
             <div class="slide first">
                 <img src="../img/img hamburguer.jpg" alt="imagem 1" />
             </div>
@@ -107,7 +106,6 @@
     
     </div>
 
-
        <section class="sobre-nos" id="Sobre-Nos">
        <div class="main">
            <div class="contentsobre">
@@ -120,11 +118,9 @@
        </div>
     </section>
 
-
-    
     <section class="avaliacoes" id="Avaliar">
        <h2>Deixe seu Feedback</h2>
-       <form onsubmit="return validateForm()">
+       <form action="process_feedback.php" method="POST" onsubmit="return validateForm()">
            <label for="name">Nome:</label>
            <input type="text" id="name" name="name">
            <label for="feedback">Feedback:</label>
@@ -156,7 +152,6 @@
     </footer>
 
     <div id="sparkles"></div>
-
 
     <script src="../JS/animação.js"></script>
 
