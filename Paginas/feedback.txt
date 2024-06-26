@@ -4,3 +4,6 @@ Feedback: O sjajfefkgs
 Nome: Rael
 Feedback: Perfeito o bando de dados txt está funcional
 ------------------
+Nome: Ra
+Feedback: Testando com vscode fechado
+------------------
