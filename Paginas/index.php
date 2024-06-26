@@ -119,15 +119,18 @@ if (isset($_GET['message'])) {
     </section>
 
     <section class="avaliacoes" id="Avaliar">
-       <h2>Deixe seu Feedback</h2>
-       <form action="process_feedback.php" method="POST" onsubmit="return validateForm()">
-           <label for="name">Nome:</label>
-           <input type="text" id="name" name="name">
-           <label for="feedback">Feedback:</label>
-           <textarea id="feedback" name="feedback"></textarea>
-           <input type="submit" value="Enviar">
-       </form>
-    </section>
+    <h2>Deixe seu Feedback</h2>
+    <form action="process_feedback.php" method="post" onsubmit="return validateForm()">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+
+
 
     <h1 id="Contatos"></h1>
     <footer>
@@ -149,11 +152,8 @@ if (isset($_GET['message'])) {
                 <p><i class="bi bi-telephone-fill"></i>(81)96255-1677</p> 
             </div>
         </div>
+        <script src="../JS/menu.js"></script>
     </footer>
-
     <div id="sparkles"></div>
-
-    <script src="../JS/animação.js"></script>
-
 </body>
 </html>
