@@ -118,18 +118,17 @@ if (isset($_GET['message'])) {
        </div>
     </section>
 
+
     <section class="avaliacoes" id="Avaliar">
     <h2>Deixe seu Feedback</h2>
     <form action="process_feedback.php" method="post" onsubmit="return validateForm()">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
         <label for="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback"></textarea>
+        <textarea id="feedback" name="feedback" required></textarea>
         <input type="submit" value="Enviar">
     </form>
 </section>
-
-
 
 
     <h1 id="Contatos"></h1>
@@ -155,5 +154,20 @@ if (isset($_GET['message'])) {
         <script src="../JS/menu.js"></script>
     </footer>
     <div id="sparkles"></div>
+
+    <script>
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var feedback = document.getElementById("feedback").value;
+
+    if (name == "" || feedback == "") {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+    }
+    return true;
+}
+</script>
+
+
 </body>
 </html>
