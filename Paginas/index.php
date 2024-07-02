@@ -1,4 +1,7 @@
 <?php
+// Essa parte do código verifica se uma mensagem foi passada pela URL (GET)
+// Se sim, exibe uma caixa de alerta com a mensagem.
+// Isso é utilizado para exibir mensagens de sucesso ou erro após o envio de formulários.
 if (isset($_GET['message'])) {
     echo '<script>alert("' . htmlspecialchars($_GET['message']) . '");</script>';
 }
@@ -155,18 +158,23 @@ if (isset($_GET['message'])) {
     </footer>
     <div id="sparkles"></div>
 
+    <!-- Script para validar o formulário de avaliação -->
     <script>
 function validateForm() {
+    // Obtém os valores dos campos do formulário
     var name = document.getElementById("name").value;
     var feedback = document.getElementById("feedback").value;
 
+    // Verifica se algum campo está vazio
     if (name == "" || feedback == "") {
+        // Exibe uma mensagem de erro e retorna falso para evitar o envio do formulário
         alert("Por favor, preencha todos os campos.");
         return false;
     }
+    // Retorna true para permitir o envio do formulário
     return true;
 }
-</script>
+    </script>
 
 
 </body>
